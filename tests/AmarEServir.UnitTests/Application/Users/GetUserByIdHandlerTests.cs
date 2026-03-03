@@ -24,12 +24,11 @@ namespace AmarEServir.UnitTests.Application.Users
         [SetUp]
         public void SetUp()
         {
-
             _mockUserRepository = new Mock<IUserRepository>();
 
             _handler = new GetUserByGuidQueryHandler(_mockUserRepository.Object);
 
-            _requestFaker = new Faker<User>()
+            _requestFaker = new Faker<User>("pt-BR")
                 .CustomInstantiator(f => new User(
                     f.Name.FullName(),
                     f.Internet.Email(),

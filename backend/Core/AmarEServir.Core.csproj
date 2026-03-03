@@ -7,6 +7,12 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Errors\**" />
+	  <EmbeddedResource Remove="Errors\**" />
+	  <None Remove="Errors\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Compile Remove="Middlewares\using AmarEServir.Core.Middlewares%3b.cs" />
 	</ItemGroup>
 
@@ -15,10 +21,6 @@
 
 		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.0" />
 		<PackageReference Include="MongoDB.Bson" Version="3.5.2" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Errors\" />
 	</ItemGroup>
 
 </Project>
